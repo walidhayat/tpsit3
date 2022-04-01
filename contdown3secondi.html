@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!DOCTYPE html>
+    <!-- saved from url=(0053)https://design.paralel.co.id/28_10_minutes_countdown/ -->
+    <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>10 Minutes Countdown Timer</title>
+    <style type="text/css">
+            body{
+                background: #000;
+            }
+            @font-face{
+                font-family: sevenSegment;
+                src: url(seven-segment.ttf);
+            }
+            h1{
+                font-family: sevenSegment;
+                font-size: 12em;
+                color: #fff;
+                -webkit-box-reflect: 
+                    below 0 
+                    -webkit-gradient( linear, left top, left bottom, from(transparent), 
+                        color-stop(20%, transparent), to( rgba(255, 255, 255, 0.4) ));
+            }
+            .container{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+    <h1 id="counter">00:03</h1>
+    </div>
+    
+    <script type="text/javascript">
+            var minute  = 0;
+            var second  = 03;
+    
+            setInterval( function(){
+                if( minute == 0 && second == 1){
+                    document.getElementById("counter").innerHTML = "00:00";
+                }else{
+                    second--;
+                    if( second == 0 ){
+                        minute --;
+                        second = 60;
+    
+                        if( minute == 0 ){
+                            minute = minute;
+                        }
+                    }
+                    if( minute.toString().length == 1 ){
+                        minute = "0"+minute;
+                    }
+    
+                    if( second.toString().length == 1 ){
+                        second = "0"+second;
+                    }
+    
+                    document.getElementById("counter").innerHTML = minute + ":" + second;
+                }
+            }, 1000)
+        </script>
+    
+    
+    </body></html>
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conta i click che avvengono in 10 secondi</title>
+    <style>
+        
+        #miodiv
+        {
+            height: 100px;
+            width: 100px;
+            background-color: darkgray;
+        }
+    </style>
+    
+</head>
+    
+<body>
+
+
+
+
+
+
+    
+
+    
+<p id="miocountdown"></p>
+<div id="miodiv">
+
+    <button id="miobutton"  class= button onclick=" contaclick()">
+
+        <p id="mioout1"></p>
+        <head>
+            <style>
+            .button {
+              padding: 100px 100px;
+              font-size: 24px;
+              text-align: center;
+              cursor: pointer;
+              outline: none;
+              color: #fff;
+              background-color: #ce961e;
+              border: none;
+              border-radius: 15px;
+              box-shadow: 0 9px #999;
+            }
+            
+            .button:hover {background-color: #3e8e41}
+            
+            .button:active {
+              background-color: #3e8e41;
+              box-shadow: 0 5px #666;
+              transform: translateY(4px);
+            }
+            </style>
+            </head>
+            <body>
+            
+            
+            
+            
+            
+            </body>
+    </button>
+
+</div>
+<script>
+    let contatore=0;
+    function contaclick (){
+        
+        
+        contatore++;
+        document .getElementById("mioout1").innerHTML=contatore.toString();
+        cambiasfondoaldiv();
+
+    }
+    function cambiasfondoaldiv(){
+        document.getElementById("miodiv").style.backgroundColor="black";
+    }
+</script>
+</body>
+</html>
